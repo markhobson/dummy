@@ -14,6 +14,7 @@
 package org.hobsoft.dummy;
 
 import java.util.Date;
+import java.util.Random;
 
 /**
  * Dummy argument factory for unit testing.
@@ -22,6 +23,16 @@ import java.util.Date;
  */
 public final class Dummy
 {
+	// ----------------------------------------------------------------------------------------------------------------
+	// fields
+	// ----------------------------------------------------------------------------------------------------------------
+
+	private static final long SEED = 363308145677738844L;
+
+	private static final Random RANDOM = new Random(SEED);
+	
+	private static final int MAX_STRING_LENGTH = 16;
+
 	// ----------------------------------------------------------------------------------------------------------------
 	// constructors
 	// ----------------------------------------------------------------------------------------------------------------
@@ -37,51 +48,59 @@ public final class Dummy
 
 	public static byte someByte()
 	{
-		return 100;
+		return (byte) someInt();
 	}
 
 	public static short someShort()
 	{
-		return 100;
+		return (short) someInt();
 	}
 	
 	public static int someInt()
 	{
-		return 100;
+		return RANDOM.nextInt();
 	}
 
 	public static long someLong()
 	{
-		return 100;
+		return RANDOM.nextLong();
 	}
 
 	public static float someFloat()
 	{
-		return 100;
+		return RANDOM.nextFloat();
 	}
 
 	public static double someDouble()
 	{
-		return 100;
+		return RANDOM.nextDouble();
 	}
 
 	public static boolean someBoolean()
 	{
-		return true;
+		return RANDOM.nextBoolean();
 	}
 
 	public static char someChar()
 	{
-		return '_';
+		return (char) someInt();
 	}
 	
 	public static String someString()
 	{
-		return "_";
+		int length = RANDOM.nextInt(MAX_STRING_LENGTH) + 1;
+		char[] chars = new char[length];
+		
+		for (int index = 0; index < length; index++)
+		{
+			chars[index] = someChar();
+		}
+		
+		return String.valueOf(chars);
 	}
 
 	public static Date someDate()
 	{
-		return new Date(100);
+		return new Date(someLong());
 	}
 }
