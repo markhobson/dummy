@@ -13,6 +13,8 @@
  */
 package org.hobsoft.dummy;
 
+import java.util.Date;
+
 /**
  * Dummy argument factory for unit testing.
  * 
@@ -76,5 +78,10 @@ public final class Dummy
 	public static String someString()
 	{
 		return "_";
+	}
+
+	public static Date someDate()
+	{
+		return new Date(100);
 	}
 }

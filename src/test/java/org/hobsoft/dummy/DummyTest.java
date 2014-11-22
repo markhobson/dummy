@@ -13,6 +13,8 @@
  */
 package org.hobsoft.dummy;
 
+import java.util.Date;
+
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.isA;
@@ -79,5 +81,11 @@ public class DummyTest
 	public void someStringReturnsString()
 	{
 		assertThat(Dummy.someString(), isA(String.class));
+	}
+	
+	@Test
+	public void someDateReturnsDate()
+	{
+		assertThat(Dummy.someDate(), isA(Date.class));
 	}
 }
