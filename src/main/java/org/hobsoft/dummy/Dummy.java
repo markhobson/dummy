@@ -46,46 +46,91 @@ public final class Dummy
 	// public methods
 	// ----------------------------------------------------------------------------------------------------------------
 
+	/**
+	 * Returns an arbitrary primitive byte.
+	 * 
+	 * @return the byte
+	 */
 	public static byte someByte()
 	{
 		return (byte) someInt();
 	}
 
+	/**
+	 * Returns an arbitrary primitive short.
+	 * 
+	 * @return the short
+	 */
 	public static short someShort()
 	{
 		return (short) someInt();
 	}
 	
+	/**
+	 * Returns an arbitrary primitive integer.
+	 * 
+	 * @return the int
+	 */
 	public static int someInt()
 	{
 		return RANDOM.nextInt();
 	}
 
+	/**
+	 * Returns an arbitrary primitive long.
+	 * 
+	 * @return the long
+	 */
 	public static long someLong()
 	{
 		return RANDOM.nextLong();
 	}
 
+	/**
+	 * Returns an arbitrary primitive float.
+	 * 
+	 * @return the float
+	 */
 	public static float someFloat()
 	{
 		return RANDOM.nextFloat();
 	}
 
+	/**
+	 * Returns an arbitrary primitive double.
+	 * 
+	 * @return the double
+	 */
 	public static double someDouble()
 	{
 		return RANDOM.nextDouble();
 	}
 
+	/**
+	 * Returns an arbitrary primitive boolean.
+	 * 
+	 * @return the boolean
+	 */
 	public static boolean someBoolean()
 	{
 		return RANDOM.nextBoolean();
 	}
 
+	/**
+	 * Returns an arbitrary primitive character.
+	 * 
+	 * @return the char
+	 */
 	public static char someChar()
 	{
 		return (char) someInt();
 	}
 	
+	/**
+	 * Returns an arbitrary string of arbitrary length, never empty.
+	 * 
+	 * @return the string
+	 */
 	public static String someString()
 	{
 		int length = RANDOM.nextInt(MAX_STRING_LENGTH) + 1;
@@ -99,6 +144,11 @@ public final class Dummy
 		return String.valueOf(chars);
 	}
 
+	/**
+	 * Returns an arbitrary date.
+	 * 
+	 * @return the date
+	 */
 	public static Date someDate()
 	{
 		return new Date(someLong());
