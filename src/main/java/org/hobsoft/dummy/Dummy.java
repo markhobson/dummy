@@ -33,6 +33,46 @@ public final class Dummy
 	// public methods
 	// ----------------------------------------------------------------------------------------------------------------
 
+	public static byte someByte()
+	{
+		return 100;
+	}
+
+	public static short someShort()
+	{
+		return 100;
+	}
+	
+	public static int someInt()
+	{
+		return 100;
+	}
+
+	public static long someLong()
+	{
+		return 100;
+	}
+
+	public static float someFloat()
+	{
+		return 100;
+	}
+
+	public static double someDouble()
+	{
+		return 100;
+	}
+
+	public static boolean someBoolean()
+	{
+		return true;
+	}
+
+	public static char someChar()
+	{
+		return '_';
+	}
+	
 	public static String someString()
 	{
 		return "_";

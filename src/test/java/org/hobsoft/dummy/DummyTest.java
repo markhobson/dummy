@@ -28,6 +28,54 @@ public class DummyTest
 	// ----------------------------------------------------------------------------------------------------------------
 	
 	@Test
+	public void someByteReturnsByte()
+	{
+		assertThat(Dummy.someByte(), isA(Byte.class));
+	}
+	
+	@Test
+	public void someShortReturnsShort()
+	{
+		assertThat(Dummy.someShort(), isA(Short.class));
+	}
+	
+	@Test
+	public void someIntReturnsInt()
+	{
+		assertThat(Dummy.someInt(), isA(Integer.class));
+	}
+	
+	@Test
+	public void someLongReturnsLong()
+	{
+		assertThat(Dummy.someLong(), isA(Long.class));
+	}
+	
+	@Test
+	public void someFloatReturnsFloat()
+	{
+		assertThat(Dummy.someFloat(), isA(Float.class));
+	}
+	
+	@Test
+	public void someDoubleReturnsDouble()
+	{
+		assertThat(Dummy.someDouble(), isA(Double.class));
+	}
+	
+	@Test
+	public void someBooleanReturnsBoolean()
+	{
+		assertThat(Dummy.someBoolean(), isA(Boolean.class));
+	}
+	
+	@Test
+	public void someCharReturnsChar()
+	{
+		assertThat(Dummy.someChar(), isA(Character.class));
+	}
+	
+	@Test
 	public void someStringReturnsString()
 	{
 		assertThat(Dummy.someString(), isA(String.class));
