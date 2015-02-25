@@ -17,7 +17,9 @@ import java.util.Date;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.isA;
+import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -45,6 +47,12 @@ public class DummyTest
 	public void someIntReturnsInt()
 	{
 		assertThat(Dummy.someInt(), isA(Integer.class));
+	}
+	
+	@Test
+	public void someNonNegativeIntReturnsNonNegativeInt()
+	{
+		assertThat(Dummy.someNonNegativeInt(), is(greaterThanOrEqualTo(0)));
 	}
 	
 	@Test

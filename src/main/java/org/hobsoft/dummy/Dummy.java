@@ -75,6 +75,16 @@ public final class Dummy
 	{
 		return RANDOM.nextInt();
 	}
+	
+	/**
+	 * Returns an arbitrary primitive integer that is greater than or equal to zero.
+	 * 
+	 * @return the int
+	 */
+	public static int someNonNegativeInt()
+	{
+		return Math.abs(someInt());
+	}
 
 	/**
 	 * Returns an arbitrary primitive long.
