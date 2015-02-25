@@ -175,11 +175,12 @@ public final class Dummy
 	{
 		try
 		{
-			return new URL("http", someString(), someNonNegativeInt(), someString());
+			return new URL(someString(), someString(), someNonNegativeInt(), someString(),
+				DummyURLStreamHandler.INSTANCE);
 		}
 		catch (MalformedURLException exception)
 		{
-			throw new IllegalStateException(exception);
+			throw new IllegalStateException("Dummy.someUrl produced a malformed URL", exception);
 		}
 	}
 }

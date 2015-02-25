@@ -13,6 +13,7 @@
  */
 package org.hobsoft.dummy;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 
@@ -102,5 +103,11 @@ public class DummyTest
 	public void someUrlReturnsUrl()
 	{
 		assertThat(Dummy.someUrl(), isA(URL.class));
+	}
+	
+	@Test(expected = IOException.class)
+	public void someUrlReturnsUnopenableUrl() throws IOException
+	{
+		Dummy.someUrl().openConnection();
 	}
 }
