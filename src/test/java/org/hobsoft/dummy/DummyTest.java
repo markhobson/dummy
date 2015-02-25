@@ -13,6 +13,7 @@
  */
 package org.hobsoft.dummy;
 
+import java.net.URL;
 import java.util.Date;
 
 import org.junit.Test;
@@ -95,5 +96,11 @@ public class DummyTest
 	public void someDateReturnsDate()
 	{
 		assertThat(Dummy.someDate(), isA(Date.class));
+	}
+	
+	@Test
+	public void someUrlReturnsUrl()
+	{
+		assertThat(Dummy.someUrl(), isA(URL.class));
 	}
 }

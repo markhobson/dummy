@@ -13,6 +13,8 @@
  */
 package org.hobsoft.dummy;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Date;
 import java.util.Random;
 
@@ -162,5 +164,22 @@ public final class Dummy
 	public static Date someDate()
 	{
 		return new Date(someLong());
+	}
+
+	/**
+	 * Returns an arbitrary URL.
+	 * 
+	 * @return the URL
+	 */
+	public static URL someUrl()
+	{
+		try
+		{
+			return new URL("http", someString(), someNonNegativeInt(), someString());
+		}
+		catch (MalformedURLException exception)
+		{
+			throw new IllegalStateException(exception);
+		}
 	}
 }
