@@ -87,6 +87,16 @@ public final class Dummy
 	{
 		return Math.abs(someInt());
 	}
+	
+	/**
+	 * Returns an arbitrary primitive integer that is less than or equal to zero.
+	 * 
+	 * @return the int
+	 */
+	public static int someNonPositiveInt()
+	{
+		return -someNonNegativeInt();
+	}
 
 	/**
 	 * Returns an arbitrary primitive long.

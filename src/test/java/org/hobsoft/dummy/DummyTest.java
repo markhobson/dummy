@@ -22,6 +22,7 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.isA;
 import static org.hamcrest.Matchers.greaterThanOrEqualTo;
+import static org.hamcrest.Matchers.lessThanOrEqualTo;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -55,6 +56,12 @@ public class DummyTest
 	public void someNonNegativeIntReturnsNonNegativeInt()
 	{
 		assertThat(Dummy.someNonNegativeInt(), is(greaterThanOrEqualTo(0)));
+	}
+	
+	@Test
+	public void someNonPositiveIntReturnsNonPositiveInt()
+	{
+		assertThat(Dummy.someNonPositiveInt(), is(lessThanOrEqualTo(0)));
 	}
 	
 	@Test
